@@ -11,10 +11,19 @@ class Annonce
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private ?int $idAnnonce = null;
 
-    public function getId(): ?int
+    #[ORM\Column(length: 255)]
+    private string $titreAnn;
+
+    #[ORM\Column(length: 3000)]
+    private string $contenuAnn;
+
+    #[ORM\Column(type: 'datetime')]
+    private \DateTime $datePublication;
+
+    public function getIdAnnonce(): ?int
     {
-        return $this->id;
+        return $this->idAnnonce;
     }
 }

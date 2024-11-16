@@ -11,10 +11,19 @@ class Chapitre
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private ?int $idChapitre = null;
 
-    public function getId(): ?int
+    #[ORM\Column(length: 255)]
+    private string $titreChap;
+
+    #[ORM\Column(length: 10000)]
+    private string $contenuChap;
+
+    #[ORM\Column(type: "integer")]
+    private int $ordre;
+
+    public function getIdChapitre(): ?int
     {
-        return $this->id;
+        return $this->idChapitre;
     }
 }

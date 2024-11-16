@@ -11,10 +11,21 @@ class Evaluation
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private ?int $idEvaluation = null;
 
-    public function getId(): ?int
+    #[ORM\Column(length: 255)]
+    private string $type;
+
+    #[ORM\Column(type: 'datetime')]
+    private DateTimeInterface $date;
+
+    #[ORM\Column(type: "float")]
+    private float $noteMaximale;
+
+
+
+    public function getIdEvaluation(): ?int
     {
-        return $this->id;
+        return $this->idEvaluation;
     }
 }

@@ -12,8 +12,8 @@ class Role
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $idRole = null;
-    #[ORM\Column(length: 255)]
 
+    #[ORM\Column(length: 255)]
     private string $nomRole;
 
 

@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ParticipationRepository;
 use Doctrine\ORM\Mapping as ORM;
+use DateTimeInterface;
+
 
 #[ORM\Entity(repositoryClass: ParticipationRepository::class)]
 class Participation
@@ -11,10 +13,13 @@ class Participation
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private ?int $idParticipation = null;
 
-    public function getId(): ?int
+    #[ORM\Column(type: 'datetime')]
+    private DateTimeInterface $dateInscription;
+
+    public function getIdParticipation(): ?int
     {
-        return $this->id;
+        return $this->idParticipation;
     }
 }

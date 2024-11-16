@@ -11,10 +11,22 @@ class Cours
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private ?int $idCours = null;
 
-    public function getId(): ?int
+    #[ORM\Column(length: 255)]
+    private string $titreCours;
+
+    #[ORM\Column(length: 3000)]
+    private string $descriptionCours;
+
+    #[ORM\Column(type: 'datetime')]
+    private \DateTime $dateDebut;
+
+    #[ORM\Column(type: 'datetime')]
+    private \DateTime $dateFin;
+
+    public function getIdCours(): ?int
     {
-        return $this->id;
+        return $this->idCours;
     }
 }

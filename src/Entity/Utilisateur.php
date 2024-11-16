@@ -14,16 +14,15 @@ class Utilisateur
     private ?int $idUtilisateur = null;
 
     #[ORM\Column(length: 255)]
+    private string $nomUser;
 
-    private string $nom;
     #[ORM\Column(length: 255)]
+    private string $prenomUser;
 
-    private string $prenom;
     #[ORM\Column(length: 255)]
-
     private string $email;
-    #[ORM\Column(length: 255)]
 
+    #[ORM\Column(length: 255)]
     private string $motDePasse;
 
 
@@ -58,52 +57,52 @@ class Utilisateur
     {
         return $this->idUtilisateur;
     }
-     // Getter et setter pour nom
-     public function getNom(): string
-     {
-         return $this->nom;
-     }
- 
-     public function setNom(string $nom): self
-     {
-         $this->nom = $nom;
-         return $this;
-     }
- 
-     // Getter et setter pour prenom
-     public function getPrenom(): string
-     {
-         return $this->prenom;
-     }
- 
-     public function setPrenom(string $prenom): self
-     {
-         $this->prenom = $prenom;
-         return $this;
-     }
- 
-     // Getter et setter pour email
-     public function getEmail(): string
-     {
-         return $this->email;
-     }
- 
-     public function setEmail(string $email): self
-     {
-         $this->email = $email;
-         return $this;
-     }
- 
-     // Getter et setter pour motDePasse
-     public function getMotDePasse(): string
-     {
-         return $this->motDePasse;
-     }
- 
-     public function setMotDePasse(string $motDePasse): self
-     {
-         $this->motDePasse = $motDePasse;
-         return $this;
-     }
-    
+
+    // Getter et setter pour nomUser
+    public function getNomUser(): string
+    {
+        return $this->nomUser;
+    }
+
+    public function setNomUser(string $nomUser): self
+    {
+        $this->nomUser = $nomUser;
+        return $this;
+    }
+
+    // Getter et setter pour prenomUser
+    public function getPrenomUser(): string
+    {
+        return $this->prenomUser;
+    }
+
+    public function setPrenomUser(string $prenomUser): self
+    {
+        $this->prenomUser = $prenomUser;
+        return $this;
+    }
+
+    // Getter et setter pour email
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+        return $this;
+    }
+
+    // Getter et setter pour motDePasse
+    public function getMotDePasse(): string
+    {
+        return $this->motDePasse;
+    }
+
+    public function setMotDePasse(string $motDePasse): self
+    {
+        $this->motDePasse = $motDePasse;
+        return $this;
+    }
 }
