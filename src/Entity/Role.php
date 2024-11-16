@@ -12,6 +12,7 @@ class Role
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $idRole = null;
+    #[ORM\Column(length: 255)]
 
     private string $nomRole;
 
@@ -23,8 +24,8 @@ class Role
 
 
 
-    public function getId(): ?int
+    public function getIdRole(): ?int
     {
-        return $this->id;
+        return $this->idRole;
     }
 }
